@@ -1,5 +1,17 @@
 {
   "name": "goods-storage-system",
   "private": true,
-  "dependencies": {}
+  "version": "0.0.0",
+  "engines": {
+    "node": "^12.18.2"
+  },
+  "dependencies": {
+    "@rails/webpacker": "5.1.1",
+    "vue": "^2.6.11",
+    "vue-loader": "^15.9.3",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.11.0"
+  }
 }
