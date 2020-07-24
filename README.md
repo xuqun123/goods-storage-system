@@ -1,0 +1,1 @@
+# goods-storage-system
