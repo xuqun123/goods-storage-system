@@ -1,0 +1,12 @@
+%figure.highcharts-figure
+  #container
+  %p.highcharts-description
+    A simple chart to show number of in/out goods for each category
+    over a period of the last week without refreshing the page, it is fine to use any Javascript chart library.
+
+
+- content_for :Javascript do
+  :javascript
+    $(function() {
+      chart(#{@categories}, #{@categories})
+    })

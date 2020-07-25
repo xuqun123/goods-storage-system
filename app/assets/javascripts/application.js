@@ -15,4 +15,44 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require highcharts
 //= require_tree .
+
+function chart(categories, series) {
+  Highcharts.chart('container', {
+      chart: {
+          type: 'column'
+      },
+      title: {
+          text: 'Number of in/out goods over a period of the last week'
+      },
+      subtitle: {
+          text: 'Goods Strorage'
+      },
+      xAxis: {
+          categories: categories,
+          crosshair: true
+      },
+      yAxis: {
+          min: 0,
+          title: {
+              text: 'Rainfall (mm)'
+          }
+      },
+      tooltip: {
+          headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+          pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+              '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+          footerFormat: '</table>',
+          shared: true,
+          useHTML: true
+      },
+      plotOptions: {
+          column: {
+              pointPadding: 0.2,
+              borderWidth: 0
+          }
+      },
+      series: series
+  });  
+}

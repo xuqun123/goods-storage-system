@@ -87,6 +87,8 @@ GEM
     haml (5.1.2)
       temple (>= 0.8.0)
       tilt
+    highcharts-rails (6.0.3)
+      railties (>= 3.1)
     i18n (1.8.5)
       concurrent-ruby (~> 1.0)
     jbuilder (2.10.0)
@@ -288,6 +290,7 @@ DEPENDENCIES
   factory_bot_rails
   foreman
   haml
+  highcharts-rails
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)

@@ -7,7 +7,19 @@ class GoodsController < ApplicationController
 
   def upload; end
 
-  def report; end
+  def report
+    @goods = Good.where('created_at >=?', 1.week.ago).order('created_at desc')
+    @categories = @goods.map(&:good_type).uniq
+
+    @series = [
+      { name: 'Goods In', data: @categories.map do |category|
+                                  @goods.where(good_type: category).where('entry_date >=?', 1.week.ago).count
+                                end                               },
+      { name: 'Goods In', data: @categories.map do |category|
+                                  @goods.where(good_type: category).where('exit_date >=?', 1.week.ago).count
+                                end                               }
+    ]
+  end
 
   def sample_csv
     @goods = Good.order('created_at desc').limit(5)
