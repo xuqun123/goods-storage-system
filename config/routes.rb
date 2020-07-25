@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       post :csv_upload
       get :upload
       get :report
+      get :sample_csv
     end
   end
 end

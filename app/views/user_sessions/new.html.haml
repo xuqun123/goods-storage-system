@@ -1,6 +1,9 @@
 = simple_form_for User.new, url: create_session_url do |f|
+  - if flash[:error]
+    %b{style: 'color: red'}= flash[:error]
+    %br
+    %br
   = f.input :email
-
   .form-group.password.required.user_password
     %label.password.required{:for => "user_password"}
       Password

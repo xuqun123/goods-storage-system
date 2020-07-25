@@ -48,6 +48,7 @@ gem 'bootstrap', '~> 4.5.0'
 # Use this to easily implement rails form
 gem 'simple_form'
 
+gem 'jquery-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

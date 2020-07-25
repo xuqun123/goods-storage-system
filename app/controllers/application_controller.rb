@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user
 
   def authenticate_user
+    flash[:error] = 'You have to login first.'
     redirect_to login_url unless current_user.present?
   end
 

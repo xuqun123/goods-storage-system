@@ -57,14 +57,14 @@ RSpec.describe GoodsCsvImporter do
     let!(:good) { create(:good, consignment_id: consignment_id) }
     let(:error_data) do
       [
-        '[AS1002AP] exit date is not required while registering this good',
-        '[AS1003AP] exit date is not required while registering this good'
+        '[AS1002AP] exit date is not required while registering this good.',
+        '[AS1003AP] exit date is not required while registering this good.'
       ]
     end
     let(:success_data) do
       [
-        '[AS1001AP] upload successfully',
-        '[AS1004AP] upload successfully'
+        '[AS1001AP] upload successfully.',
+        '[AS1004AP] upload successfully.'
       ]
     end
 

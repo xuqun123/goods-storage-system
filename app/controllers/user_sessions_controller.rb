@@ -11,6 +11,7 @@ class UserSessionsController < ApplicationController
       session[:user_id] = @user.id
       redirect_to root_url
     else
+      flash[:error] = 'Incorrect email or password.'
       redirect_to login_url
     end
   end
