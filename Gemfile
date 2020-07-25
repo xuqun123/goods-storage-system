@@ -22,10 +22,10 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+# Use ActiveModel has_secure_password
+gem 'bcrypt', '~> 3.1.7'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -48,6 +48,10 @@ group :development, :test do
   gem 'rspec-rails'
   # Use simplecov for testing coverage
   gem 'simplecov'
+  # Use facotry_bot for creating testing data
+  gem 'factory_bot_rails'
+  # Use matchers to help with model properties match check
+  gem 'shoulda-matchers', '~> 4.0'
 end
 
 group :development do
