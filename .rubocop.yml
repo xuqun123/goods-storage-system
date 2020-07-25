@@ -5,3 +5,5 @@ Style/Documentation:
   Enabled: false  
 Metrics/BlockLength:
   ExcludedMethods: ['describe', 'context']
+Metrics/MethodLength:
+  Max: 100

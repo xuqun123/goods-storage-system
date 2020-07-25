@@ -1,0 +1,8 @@
+consignment_id,name,good_type,source,destination,entry_date,exit_date
+AS1001AP,Coconuts,Food,Australia/Sydney,"Australia/Perth
+",13/1/2019 18:53,
+AS1002AP,"Textile
+ ",Food,Australia/Sydney,Australia/Perth,14/01/2019 6:53,15/01/2019 6:53
+AS1003AP,Wooden Boards 20”x20”,Wood,Australia/Adelaide,Australia/Melbourne,13/1/2019 18:53,10/01/2019 6:53
+AS1004AP,Edible Oil (10L),"Liquid
+",Australia/Adelaide,Australia/Melbourne,13/1/2019 18:53,
