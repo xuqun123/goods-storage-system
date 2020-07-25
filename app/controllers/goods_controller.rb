@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
 class GoodsController < ApplicationController
-  def index; end
+  def index
+    @goods = Good.order('created_at desc')
+  end
 
   def upload; end
 

@@ -1,0 +1,22 @@
+%h2 Goods List 
+
+%table.table
+  %thead
+    %tr{:class => 'table-warning'}
+      %th{:scope => "col"} Consignment ID
+      %th{:scope => "col"} Name
+      %th{:scope => "col"} Type
+      %th{:scope => "col"} Source
+      %th{:scope => "col"} Destination
+      %th{:scope => "col"} Entry Date
+      %th{:scope => "col"} Exit Date
+  %tbody
+    - @goods.each do |good|
+      %tr
+        %th{:scope => "row"}= good.consignment_id
+        %td= good.name
+        %td= good.good_type
+        %td= good.source
+        %td= good.destination
+        %td= good.entry_date&.strftime('%d/%m/%Y %H:%M')
+        %td= good.exit_date&.strftime('%d/%m/%Y %H:%M')
