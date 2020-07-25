@@ -1,0 +1,28 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+    %title GoodsStorageSystem
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application'
+  %body
+    %navigation
+      .row
+        .col-3
+          = image_tag 'bryk_logo.png', height: '80px', id: 'logo'
+        .col-9
+          %ul.nav.justify-content-end.p-4
+            %li.nav-item= link_to 'Goods', goods_url, class: 'nav-link'
+            %li.nav-item= link_to 'Upload', upload_goods_url, class: 'nav-link'
+            %li.nav-item= link_to 'Report', report_goods_url, class: 'nav-link'
+            %li.nav-item
+              - if current_user.present?
+                = link_to 'logout', logout_url, class: 'nav-link'
+              - else
+                = link_to 'login', login_url, class: 'nav-link'            
+
+    .container.p-5= yield
+    %footer 
+      %h6 Goods Storage System - Quintin X

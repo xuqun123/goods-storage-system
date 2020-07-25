@@ -41,7 +41,7 @@ RSpec.describe 'UserSessions', type: :request do
     end
   end
 
-  describe 'DELETE /logout' do
+  describe 'get /logout' do
     let(:password) { 'user_password' }
     let(:user) { create(:user, password: password) }
     let(:params) { { email: user.email, password: password } }
@@ -51,7 +51,7 @@ RSpec.describe 'UserSessions', type: :request do
     it 'clears user session and redirects to login' do
       expect(session[:user_id]).to eq user.id
 
-      delete '/logout'
+      get '/logout'
       expect(response).to redirect_to(login_url)
       expect(session[:user_id]).to be_nil
     end

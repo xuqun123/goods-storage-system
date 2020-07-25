@@ -39,6 +39,16 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # Use webpack for FE Vue
 gem 'webpacker'
 
+# Use haml to better work with Rails views
+gem 'haml'
+
+# User bootstrap for UI views
+gem 'bootstrap', '~> 4.5.0'
+
+# Use this to easily implement rails form
+gem 'simple_form'
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
