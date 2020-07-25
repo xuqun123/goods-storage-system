@@ -14,11 +14,11 @@ class GoodsController < ApplicationController
     @series = [
       { name: 'Goods In', data: @categories.map do |category|
                                   @goods.where(good_type: category).where('entry_date >=?', 1.week.ago).count
-                                end                               },
-      { name: 'Goods In', data: @categories.map do |category|
-                                  @goods.where(good_type: category).where('exit_date >=?', 1.week.ago).count
-                                end                               }
-    ]
+                                end },
+      { name: 'Goods Out', data: @categories.map do |category|
+                                   @goods.where(good_type: category).where('exit_date >=?', 1.week.ago).count
+                                 end }
+    ].to_json
   end
 
   def sample_csv

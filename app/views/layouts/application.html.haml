@@ -18,7 +18,7 @@
           %ul.nav.justify-content-end.p-4
             %li.nav-item= link_to 'Goods', goods_url, class: 'nav-link'
             %li.nav-item= link_to 'Upload', upload_goods_url, class: 'nav-link'
-            %li.nav-item= link_to 'Report', report_goods_url, class: 'nav-link'
+            %li.nav-item= link_to 'Report', report_goods_url, class: 'nav-link', data: { turbolinks: false }
             %li.nav-item
               - if current_user.present?
                 = link_to 'logout', logout_url, class: 'nav-link'

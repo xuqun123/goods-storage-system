@@ -5,8 +5,8 @@
     over a period of the last week without refreshing the page, it is fine to use any Javascript chart library.
 
 
-- content_for :Javascript do
+- content_for :javascript do
   :javascript
     $(function() {
-      chart(#{@categories}, #{@categories})
+      chart(#{raw @categories}, #{raw @series})
     })
